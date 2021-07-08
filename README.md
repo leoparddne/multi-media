@@ -19,7 +19,7 @@
             pusher.PushDesktop(SystemParameters.PrimaryScreenWidth,
                 SystemParameters.PrimaryScreenHeight, new System.Drawing.Point(), testRtmp);
 ```
-//拉流
+//停止
 ```
         pusher?.Kill();
 ```

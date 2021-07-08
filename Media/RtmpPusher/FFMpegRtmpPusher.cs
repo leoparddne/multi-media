@@ -57,7 +57,7 @@ namespace MultiMedia.RtmpPusher
             AddParameter($"-offset_y {offsetPosstion.Y}");
             AddParameter(" -i desktop -vcodec libx264 -acodec copy -preset:v ultrafast -tune:v zerolatency -max_delay 10 -g 50 -sc_threshold 0 -f flv ");
 
-            AddParameter(rtmp);
+            AddParameter($"\"{rtmp}\"");
         }
 
         public override void Process_OutputDataReceived(object sender, DataReceivedEventArgs e)

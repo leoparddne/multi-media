@@ -8,6 +8,19 @@
 .NET 5
 
 
+核心逻辑为通过ffmpeg相关参数推流
+```
+-thread_queue_size 1000
+-r 30 -f gdigrab
+-s {width}x{height}
+-offset_x {offsetPosstion.X}
+-offset_y {offsetPosstion.Y}
+-i desktop -vcodec libx264 -acodec copy -preset:v ultrafast -tune:v zerolatency -max_delay 10 -g 50 -sc_threshold 0 -f flv
+```
+
+通过绑定屏幕宽高及窗口定位抓取屏幕指定区域并将相关数据推流道指定rtmp服务器
+
+
 
 #### 使用说明
 //推流
